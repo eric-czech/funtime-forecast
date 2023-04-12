@@ -1,2 +1,3 @@
-# kid-schedule
-Activity ideas for kids
+# funtime-forecast
+
+An activity calendar for young children.
