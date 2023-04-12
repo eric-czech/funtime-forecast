@@ -10,6 +10,9 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.7/js/tether.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"></script>
+
+  <script src='data.js'></script>
 </head>
 <body>
   <div id='calendar'></div>
@@ -34,57 +37,95 @@
 
 
   <script>
-  $(document).ready(function() {
-    var activities = {
-      'Morning routine w/ yoga (15 minutes)': [
-        {'title': 'Activity 1', 'description': 'Long description'},
-        {'title': 'Activity 2', 'description': 'Long description'},
-        // Add more activities as needed
-      ],
-      'Circle time (20 minutes)': [
-        {'title': 'Activity 1', 'description': 'Long description'},
-        {'title': 'Activity 2', 'description': 'Long description'},
-        // Add more activities as needed
-      ],
-      'Gross motor activity (30 minutes)': [
-        {'title': 'Activity 1', 'description': 'Long description'},
-        {'title': 'Activity 2', 'description': 'Long description'},
-        // Add more activities as needed
-      ]
-    };
-    var today = moment().startOf('day');
-    var endOfMonth = moment().endOf('month');
-    var events = [];
-    var categories = Object.keys(activities);
-    while (today <= endOfMonth) {
-      categories.forEach(function(category) {
-        var activityIndex = Math.floor(Math.random() * activities[category].length);
-        events.push({
-          //title: activities[category][activityIndex].title,
-          title: category,
-          start: today.clone().add(9, 'hours'),
-          description: 'Instructions for ' + activities[category][activityIndex].description + '.'
-        });
-      });
-      today.add(1, 'day');
-    }
-    $('#calendar').fullCalendar({
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay'
-      },
-      events: events,
-      eventClick: function(calEvent, jsEvent, view) {
-        $('#myModal .modal-title').html(calEvent.title);
-        $('#myModal .modal-body').html(calEvent.description);
-        $('#myModal').modal();
-      }
+$(document).ready(function() {
+  // Seed the random number generator with a fixed value
+  Math.seedrandom('a93jds1');
+
+  var today = moment().startOf('day');
+  var endOfMonth = moment().endOf('month');
+  var events = [];
+  var categories = Object.keys(activities);
+
+  // Plotly default color palette
+  var plotlyDefaultColors = [
+    '#1f77b4', // muted blue
+    '#ff7f0e', // safety orange
+    '#2ca02c', // cooked asparagus green
+    '#d62728', // brick red
+    '#9467bd', // muted purple
+    '#8c564b', // chestnut brown
+    '#e377c2', // raspberry yogurt pink
+    '#7f7f7f'  // middle gray
+  ];
+
+  // Your array of strings (categories)
+  var categories = Object.keys(activities);
+
+  // Function to map categories to colors
+  function mapCategoriesToColors(categories, colorPalette) {
+    var colors = {};
+    categories.forEach(function(category, index) {
+      colors[category] = colorPalette[index % colorPalette.length];
     });
+    return colors;
+  }
+
+  function makeBoldBeforeColon(str) {
+    const colonIndex = str.indexOf(':');
+    if (colonIndex === -1) {
+      return str;
+    }
+
+    const boldPart = str.slice(0, colonIndex);
+    const rest = str.slice(colonIndex);
+    return `<b>${boldPart}</b>${rest}`;
+  }
+
+  // Map categories to colors
+  var colors = mapCategoriesToColors(categories, plotlyDefaultColors);
+
+  while (today <= endOfMonth) {
+    // Shuffle categories array and take the first 3 elements
+    var shuffledCategories = categories.sort(() => 0.5 - Math.random());
+    var selectedCategories = shuffledCategories.slice(0, 3);
+    var hours = [9, 11, 16]
+    selectedCategories.forEach(function(category, categoryIndex) {
+      var descriptions = [];
+
+      var activityIndexes = Array.from(Array(activities[category].length).keys()).sort(() => 0.5 - Math.random());
+      var selectedIndexes = activityIndexes.slice(0, 5);
+
+      for (var i = 0; i < selectedIndexes.length; i++) {
+        var activityIndex = selectedIndexes[i];
+        var description = makeBoldBeforeColon(activities[category][activityIndex].description);
+        descriptions.push('<li>' + description + '</li>');
+      }
+      events.push({
+        title: category,
+        start: today.clone().add(hours[categoryIndex], 'hours'),
+        description: '<h3>Ideas</h3><br><ul>' + descriptions.join('<br>') + '</ul>',
+        color: colors[category]
+      });
+    });
+    today.add(1, 'day');
+  }
+  // ...
+
+  $('#calendar').fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+    },
+    events: events,
+    eventClick: function(calEvent, jsEvent, view) {
+      $('#myModal .modal-title').html(calEvent.title);
+      $('#myModal .modal-body').html(calEvent.description);
+      $('#myModal').modal();
+    }
   });
-  </script>
-
-
+});
+</script>
 
 
 </body>
