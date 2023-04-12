@@ -72,11 +72,6 @@ var activities = {
       },
       {
          "heading":"Art and craft (30 minutes)",
-         "description":"Maybe out in the driveway?",
-         "title":"Maybe out in the driveway?"
-      },
-      {
-         "heading":"Art and craft (30 minutes)",
          "description":"Collage making: Collect a variety of materials, such as fabric scraps, colorful paper, and natural materials like leaves or twigs. Help the toddler create a collage by gluing the materials onto a piece of paper or cardboard.",
          "title":"Collage making"
       }
@@ -207,6 +202,11 @@ var activities = {
          "title":"Dancing"
       },
       {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Hopscotch: Draw a hopscotch grid on the ground with chalk and encourage the toddler to hop from square to square.",
+         "title": "Hopscotch"
+      },
+      {
          "heading":"Gross motor activity (30 minutes)",
          "description":"Playing with a ball: Practice rolling, throwing, and kicking a ball to improve the toddler's coordination and motor skills. You can create a simple goal or target for the child to aim at.",
          "title":"Playing with a ball"
@@ -215,7 +215,62 @@ var activities = {
          "heading":"Gross motor activity (30 minutes)",
          "description":"Obstacle course: Set up a simple obstacle course using household items like pillows, blankets, or chairs. Encourage the toddler to crawl, climb, and jump through the course. For ideas and inspiration, you can refer to this source: \"100 Fun & Easy Learning Games for Kids\" by Amanda Boyarshinov and Kim Vij.",
          "title":"Obstacle course"
-      }
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Simon says: Play the classic game of Simon Says to get your toddler moving and following directions. Give commands like \"Simon says jump up and down\" or \"Simon says hop on one foot.\"",
+         "title": "Simon says"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Hula hoop: Encourage the toddler to move and groove with a hula hoop. Show them how to rotate their hips to keep the hoop going.",
+         "title": "Hula hoop"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Follow the leader: Take turns being the leader and have the toddler follow your movements. You can include jumping, skipping, and other simple movements.",
+         "title": "Follow the leader"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Animal movements: Encourage the toddler to move like different animals, such as crawling like a bear or hopping like a rabbit.",
+         "title": "Animal movements"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Parachute play: Use a large parachute and have the toddler help lift it up and down. You can also play games like \"popcorn\" where the child jumps up when the parachute is lifted.",
+         "title": "Parachute play"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Balloon volleyball: Play a game of volleyball using a balloon as the ball. Encourage the toddler to use their hands or feet to keep the balloon in the air.",
+         "title": "Balloon volleyball"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Soccer: Practice kicking and passing a soccer ball with the toddler to improve their coordination and gross motor skills.",
+         "title": "Soccer"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Driveway obstacle course: Set up a course in the driveway with cones, hula hoops, and other obstacles for the toddler to navigate.",
+         "title": "Driveway obstacle course"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Mini trampoline: Invest in a mini trampoline for your toddler to bounce on. Make sure to supervise them while they use it.",
+         "title": "Mini trampoline"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Musical chairs: Play the classic game of musical chairs to get your toddler moving and practicing listening skills.",
+         "title": "Musical chairs"
+      },
+      {
+         "heading": "Gross motor activity (30 minutes)",
+         "description": "Wheelbarrow walk: Have the toddler hold their body up with their hands while you hold their legs and walk forward. It's a fun way to build strength and coordination.",
+         "title": "Wheelbarrow walk"
+      },
    ],
    "Yoga routine (15 minutes)":[
       {
@@ -299,6 +354,107 @@ var activities = {
          "heading":"Sensory play (30 minutes)",
          "description":"Sensory bins: Create themed sensory bins filled with materials like rice, pasta, or beans, and add small toys or objects related to the theme. For example, a farm-themed bin could include toy animals and tractors. For more sensory bin ideas, refer to the book \"Sensory Bins: The What, The How & The Why\" by Laura Lisciandro.",
          "title":"Sensory bins"
-      }
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Texture walk: Create a sensory walkway using different textures such as sandpaper, bubble wrap, or foam tiles for the toddler to walk on barefoot.",
+         "title": "Texture walk"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Scented playdough: Make homemade playdough using scented oils like lavender or peppermint. Encourage the toddler to explore and manipulate the dough with their hands.",
+         "title": "Scented playdough"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Magnetic play: Provide magnetic letters, numbers, and shapes for the toddler to explore and manipulate on a magnetic board.",
+         "title": "Magnetic play"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Ice excavation: Freeze small toys or objects in ice cubes and provide tools like spoons or syringes for the toddler to excavate them.",
+         "title": "Ice excavation"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Shaving cream play: Spray shaving cream on a tray or table and let the toddler explore the texture and manipulate it with their hands.",
+         "title": "Shaving cream play"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Bubble wrap painting: Dip bubble wrap into paint and use it to make prints on paper. Encourage the toddler to experiment with different colors and textures.",
+         "title": "Bubble wrap painting"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Garden sensory bin: Create a sensory bin with soil, flowers, and other natural materials for the toddler to explore and play with.",
+         "title": "Garden sensory bin"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Rainbow rice: Dye rice different colors using food coloring and provide tools like cups and spoons for the toddler to manipulate and play with.",
+         "title": "Rainbow rice"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Taste test: Provide a variety of foods with different flavors and textures for the toddler to taste and explore.",
+         "title": "Taste test"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Gel bag sensory play: Fill a ziplock bag with hair gel and small toys or objects for the toddler to manipulate and play with.",
+         "title": "Gel bag sensory play"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Mud kitchen: Create an outdoor play kitchen using mud and natural materials like sticks and leaves for the toddler to explore and play with.",
+         "title": "Mud kitchen"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Edible finger paint: Make homemade finger paint using ingredients like flour, water, and food coloring that are safe for the toddler to eat.",
+         "title": "Edible finger paint"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Sensory bags: Fill ziplock bags with different materials like water beads, glitter, or sequins for the toddler to explore and manipulate.",
+         "title": "Sensory bags"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Nature sensory walk: Take a walk outdoors and encourage the toddler to touch and explore different natural materials like rocks, leaves, and flowers.",
+         "title": "Nature sensory walk"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Ice cube painting: Freeze paint in ice cube trays and provide paper for the toddler to make prints as the ice cubes melt.",
+         "title": "Ice cube painting"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Pom-pom sorting: Provide pom-poms of different sizes and colors and encourage the toddler to sort them into different containers or compartments.",
+         "title": "Pom-pom sorting"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Jelly sensory play: Make jelly using gelatin and let it set in a tray or container. Encourage the toddler to explore and manipulate the jelly with their hands.",
+         "title": "Jelly sensory play"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Scented sensory bottles: Fill small bottles with scented oils and objects like glitter or beads for the toddler to shake and explore.",
+         "title": "Scented sensory bottles"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Colored spaghetti: Dye cooked spaghetti different colors using food coloring and provide tools like tongs or tweezers for the toddler to manipulate and play with.",
+         "title": "Colored spaghetti"
+      },
+      {
+         "heading": "Sensory play (30 minutes)",
+         "description": "Kinetic sand play: Provide kinetic sand and molds or tools for the toddler to manipulate and play with. Kinetic sand has a unique texture that is fun to explore and mold.",
+         "title": "Kinetic sand play"
+      },
+
    ]
 }
